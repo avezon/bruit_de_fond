@@ -1,0 +1,3 @@
+NameError in line 33 of /home/vezon/bruit_de_fond/mon_workflow.smk:
+name 'ROOT_F2T_DIR' is not defined
+  File "/home/vezon/bruit_de_fond/mon_workflow.smk", line 33, in <module>

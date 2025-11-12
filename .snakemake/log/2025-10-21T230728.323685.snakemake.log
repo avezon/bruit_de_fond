@@ -1,0 +1,87 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 2
+Rules claiming more threads will be scaled down.
+Job stats:
+job                       count    min threads    max threads
+----------------------  -------  -------------  -------------
+all                           1              1              1
+convert_faster_to_root        5              1              1
+total                         6              1              1
+
+Select jobs to execute...
+
+[Tue Oct 21 23:07:28 2025]
+rule convert_faster_to_root:
+    input: data/faster/New_plastics_2000V_atleast_GADGET_withblackcover_500mbar_0001.fast
+    output: data/root/New_plastics_2000V_atleast_GADGET_withblackcover_500mbar_0001.root
+    jobid: 5
+    wildcards: faster_name=New_plastics_2000V_atleast_GADGET_withblackcover_500mbar_0001
+    resources: tmpdir=/tmp
+
+
+[Tue Oct 21 23:07:28 2025]
+rule convert_faster_to_root:
+    input: data/faster/New_plastics_2500V_atleast_GADGET_withblackcover_1000mbar_0001.fast
+    output: data/root/New_plastics_2500V_atleast_GADGET_withblackcover_1000mbar_0001.root
+    jobid: 1
+    wildcards: faster_name=New_plastics_2500V_atleast_GADGET_withblackcover_1000mbar_0001
+    resources: tmpdir=/tmp
+
+[Tue Oct 21 23:07:32 2025]
+Finished job 1.
+1 of 6 steps (17%) done
+Select jobs to execute...
+
+[Tue Oct 21 23:07:32 2025]
+rule convert_faster_to_root:
+    input: data/faster/New_plastics_2000V_atleastGAD_Empty_0001.fast
+    output: data/root/New_plastics_2000V_atleastGAD_Empty_0001.root
+    jobid: 2
+    wildcards: faster_name=New_plastics_2000V_atleastGAD_Empty_0001
+    resources: tmpdir=/tmp
+
+[Tue Oct 21 23:07:34 2025]
+Finished job 5.
+2 of 6 steps (33%) done
+Select jobs to execute...
+
+[Tue Oct 21 23:07:34 2025]
+rule convert_faster_to_root:
+    input: data/faster/New_plastics_2500V_atleast_GADGET_withblackcover_ascension_0001.fast
+    output: data/root/New_plastics_2500V_atleast_GADGET_withblackcover_ascension_0001.root
+    jobid: 4
+    wildcards: faster_name=New_plastics_2500V_atleast_GADGET_withblackcover_ascension_0001
+    resources: tmpdir=/tmp
+
+[Tue Oct 21 23:07:37 2025]
+Finished job 2.
+3 of 6 steps (50%) done
+Select jobs to execute...
+
+[Tue Oct 21 23:07:37 2025]
+rule convert_faster_to_root:
+    input: data/faster/New_plastics_atleastGAD_Empty_V2_0001.fast
+    output: data/root/New_plastics_atleastGAD_Empty_V2_0001.root
+    jobid: 3
+    wildcards: faster_name=New_plastics_atleastGAD_Empty_V2_0001
+    resources: tmpdir=/tmp
+
+[Tue Oct 21 23:07:39 2025]
+Finished job 4.
+4 of 6 steps (67%) done
+[Tue Oct 21 23:07:41 2025]
+Finished job 3.
+5 of 6 steps (83%) done
+Select jobs to execute...
+
+[Tue Oct 21 23:07:41 2025]
+localrule all:
+    input: data/root/New_plastics_2500V_atleast_GADGET_withblackcover_1000mbar_0001.root, data/root/New_plastics_2000V_atleastGAD_Empty_0001.root, data/root/New_plastics_atleastGAD_Empty_V2_0001.root, data/root/New_plastics_2500V_atleast_GADGET_withblackcover_ascension_0001.root, data/root/New_plastics_2000V_atleast_GADGET_withblackcover_500mbar_0001.root
+    jobid: 0
+    resources: tmpdir=/tmp
+
+[Tue Oct 21 23:07:41 2025]
+Finished job 0.
+6 of 6 steps (100%) done
+Complete log: /home/vezon/bruit_de_fond/.snakemake/log/2025-10-21T230728.323685.snakemake.log

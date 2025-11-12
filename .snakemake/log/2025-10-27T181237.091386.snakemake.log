@@ -1,0 +1,91 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job stats:
+job                         count    min threads    max threads
+------------------------  -------  -------------  -------------
+all                             1              1              1
+convert_with_faster2root        9              1              1
+total                          10              1              1
+
+Select jobs to execute...
+
+[Mon Oct 27 18:12:37 2025]
+rule convert_with_faster2root:
+    input: data/faster/New_plastics_2500V_atleast_GADGET_withblackcover_ascension_0001.fast
+    output: data/root_faster2root/New_plastics_2500V_atleast_GADGET_withblackcover_ascension_0001.root
+    jobid: 17
+    wildcards: faster_name=New_plastics_2500V_atleast_GADGET_withblackcover_ascension_0001
+    resources: tmpdir=/tmp
+
+
+[Mon Oct 27 18:12:37 2025]
+rule convert_with_faster2root:
+    input: data/faster/Test_GADGET_1.5bar_GorG2orG4orG24_0001.fast
+    output: data/root_faster2root/Test_GADGET_1.5bar_GorG2orG4orG24_0001.root
+    jobid: 11
+    wildcards: faster_name=Test_GADGET_1.5bar_GorG2orG4orG24_0001
+    resources: tmpdir=/tmp
+
+
+[Mon Oct 27 18:12:37 2025]
+rule convert_with_faster2root:
+    input: data/faster/Test_GADGET_1bar_GorG2orG4orG24_0001.fast
+    output: data/root_faster2root/Test_GADGET_1bar_GorG2orG4orG24_0001.root
+    jobid: 13
+    wildcards: faster_name=Test_GADGET_1bar_GorG2orG4orG24_0001
+    resources: tmpdir=/tmp
+
+[Mon Oct 27 18:12:37 2025]
+Error in rule convert_with_faster2root:
+    jobid: 17
+    output: data/root_faster2root/New_plastics_2500V_atleast_GADGET_withblackcover_ascension_0001.root
+    shell:
+        
+        ./Faster2root/Faster2root data/faster/New_plastics_2500V_atleast_GADGET_withblackcover_ascension_0001.fast data/root_faster2root/New_plastics_2500V_atleast_GADGET_withblackcover_ascension_0001.root
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Mon Oct 27 18:12:37 2025]
+Error in rule convert_with_faster2root:
+    jobid: 11
+    output: data/root_faster2root/Test_GADGET_1.5bar_GorG2orG4orG24_0001.root
+    shell:
+        
+        ./Faster2root/Faster2root data/faster/Test_GADGET_1.5bar_GorG2orG4orG24_0001.fast data/root_faster2root/Test_GADGET_1.5bar_GorG2orG4orG24_0001.root
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+
+[Mon Oct 27 18:12:37 2025]
+rule convert_with_faster2root:
+    input: data/faster/New_plastics_atleastGAD_Empty_V2_0001.fast
+    output: data/root_faster2root/New_plastics_atleastGAD_Empty_V2_0001.root
+    jobid: 15
+    wildcards: faster_name=New_plastics_atleastGAD_Empty_V2_0001
+    resources: tmpdir=/tmp
+
+[Mon Oct 27 18:12:37 2025]
+Error in rule convert_with_faster2root:
+    jobid: 13
+    output: data/root_faster2root/Test_GADGET_1bar_GorG2orG4orG24_0001.root
+    shell:
+        
+        ./Faster2root/Faster2root data/faster/Test_GADGET_1bar_GorG2orG4orG24_0001.fast data/root_faster2root/Test_GADGET_1bar_GorG2orG4orG24_0001.root
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Mon Oct 27 18:12:37 2025]
+Error in rule convert_with_faster2root:
+    jobid: 15
+    output: data/root_faster2root/New_plastics_atleastGAD_Empty_V2_0001.root
+    shell:
+        
+        ./Faster2root/Faster2root data/faster/New_plastics_atleastGAD_Empty_V2_0001.fast data/root_faster2root/New_plastics_atleastGAD_Empty_V2_0001.root
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /home/vezon/bruit_de_fond/.snakemake/log/2025-10-27T181237.091386.snakemake.log

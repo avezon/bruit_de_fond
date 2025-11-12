@@ -1,0 +1,4 @@
+Building DAG of jobs...
+WildcardError in line 29 of /home/vezon/bruit_de_fond/mon_workflow.smk:
+Wildcards in input files cannot be determined from output files:
+'faster_dir'
